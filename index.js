@@ -38,11 +38,11 @@ inquirer
 },
 ])
 .then((data) => {
-    const logo = 'logo.svg';
+    const svgImg = './assets/logo.svg';
     const finalLogo = generateShape(data);
 
-fs.writeToFile(logo, generateSVG(finalLogo), (err) =>
-err? console.error(err) : console.log("Generated SVG Logo @ logo.svg")
+fs.writeFile(svgImg, generateSVG(finalLogo), (err) =>
+err ? console.error(err) : console.log("Generated SVG Logo @ logo.svg")
  );
 })
 .catch((err)=> console.log(err));
