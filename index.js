@@ -6,9 +6,10 @@ const inquirer = require('inquirer');
 
 const fs = require('fs');
 
-const {generateSVG} = require('./lib/generateSVG')
+const { generateSVG } = require('./lib/generateSVG')
 
-const {generateShape} = require('./lib/generateShape')
+const { generateShape } = require('./lib/generateShape')
+
 
 // need to write the function that writes the file
 // need a prompt for the questions for the user
@@ -34,7 +35,7 @@ inquirer
     type: 'list',
     name:'logoShape',
     message: 'Please choose a logo shape.',
-    choices: ["square", "circle", "pentagon"],
+    choices: ["square", "circle", "triangle"],
 },
 ])
 .then((data) => {
